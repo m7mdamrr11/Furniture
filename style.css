@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+header {
+  background: #f39c12;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* اللوجو في النص */
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* الترحيب */
+
+.hero {
+  background: url('hero.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6); /* طبقة شفافة */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background: #e67e22;
+}
+
+/* المنتجات */
+
+.products-modern {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.products-modern h2 {
+  font-size: 34px;
+  margin-bottom: 50px;
+  color: #2c3e50;
+  font-weight: bold;
+  position: relative;
+}
+
+.modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.modern-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.modern-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.card-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #f39c12;
+}
+
+.card-content p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* نحن */
+
+.why-us {
+  padding: 70px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.why-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.why-card .icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.why-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+.policy {
+  padding: 70px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.policy h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+.policy-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.step {
+  background: #f9f9f9;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.step .number {
+  width: 50px;
+  height: 50px;
+  background: #d4af37; /* ذهبي */
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.step h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.step p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+.testimonials {
+  padding: 70px 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.review img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+
+.contact-dark {
+  padding: 70px 20px;
+  background: #111; /* خلفية غامقة */
+  color: #eee;
+  text-align: center;
+}
+
+.contact-dark h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #d4af37; /* ذهبي */
+}
+
+.contact-info {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.map-section {
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* نسبة عرض إلى ارتفاع 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+
+
+.management {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.management h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.manager-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 350px;
+  margin: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.manager-card .avatar {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #f39c12;
+}
+
+.manager-card .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manager-card h3 {
+  margin: 15px 0 5px;
+  font-size: 22px;
+  color: #222;
+}
+
+.manager-card p {
+  color: #777;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
